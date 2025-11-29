@@ -94,11 +94,7 @@ Cada ataque básico preenche 1 slot vazio com: **fogo (F)**, **gelo (G)** ou **t
 
 * A habilidade consome apenas os slots do elemento correspondente.
 
-Menu Especial:
-1 - Ataque básico
-2 - Bola de Fogo 
-3 - Nova de Gelo 
-4 - Trovão
+
 
 ---
 
@@ -134,16 +130,13 @@ Ataque básico aplica **1 a 10 grilhões** ao inimigo.
 | **Julgamento** | consome todos os grilhões, **+5% de dano por grilhão** |
 | **Sentença** | cura, cura base aumentada **+10% por grilhão**, consome todos os grilhões |
 
-Menu Especial:
-1 - Ataque básico
-2 - Julgamento 
-3 - Sentença
+
 
 ---
 
 ## Arquitetura
 
-A estrutura de arquivos do projeto é organizada da seguinte forma:
+
 
 A estrutura de arquivos do projeto é organizada da seguinte forma:
 

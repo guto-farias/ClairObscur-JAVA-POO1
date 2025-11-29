@@ -10,6 +10,7 @@ O jogo implementa **batalhas 1 vs 1** entre personagens com mecânicas únicas.
 * [Descrição Geral](#descrição-geral)
 * [Funcionalidades](#funcionalidades)
 * [Como Executar](#como-executar)
+* [Regras Gerais](#regras-gerais)
 * [Personagens](#personagens)
     * [Gustave](#gustave)
     * [Lune](#lune)
@@ -17,7 +18,6 @@ O jogo implementa **batalhas 1 vs 1** entre personagens com mecânicas únicas.
     * [Monoco](#monoco)
 * [Arquitetura](#arquitetura)
 * [Conceitos de POO Aplicados](#conceitos-de-poo-aplicados)
-* [Observações Finais](#observações-finais)
 
 ---
 
@@ -51,6 +51,12 @@ java Main
 ```
 ---
 
+## Regras Gerais
+
+No ClairObscur, as partidas seguem o formato 1 contra 1, onde dois jogadores escolhem personagens distintos — não é permitido selecionar o mesmo personagem para ambos os lados. Todos os combatentes utilizam um ataque básico padronizado, que serve como base para a ativação ou progressão de cada uma das habilidades específicas de suas classes, como carregamento, marcas elementais, poses ou grilhões. Ao final de cada combate, todos os estados temporários e mecânicas especiais são resetados, garantindo que cada nova partida comece em condições equilibradas e independentes da anterior. O vencedor recebe pontos de experiência, que permitem ao personagem subir de nível, porém esse nível tem função apenas visual, não altera atributos, danos ou defesas e existe apenas para registrar o progresso do jogador ao longo das batalhas.
+
+---
+
 ## Personagens
 
 ### Gustave 
@@ -61,17 +67,18 @@ Guerreiro da Sobrecarga ⚡
 
 Cada ataque básico:
 1.  causa dano normal
-2.  gera **1 a 3 pontos de carga**
+2.  gera **1 a 3 pontos de carga**, esse valor sendo somado a cada ataque básico utilizado até 10.
 
-* **Sobrecarga** acumula até **10**.
+* **Cargas** acumulam até **10** como citado acima, tornando cada vez mais benéfico usar a **Habilidade** citada abaixo:
 * Habilidade **“Sobrecarga”**:
     $$dano = 12 \times (1.25^{\text{carga}})$$
-    * Após usar, a carga zera.
+    * Após usar, a carga zera. Com o jogador podendo voltar a usar ataques básicos para acumular cargas
     * Reset ao fim da batalha.
 
 ---
 
-### Lune – Maga Elemental 🔥❄⚡
+### Lune
+Maga Elemental 🔥❄⚡
 
 | Mecânica Principal | Roda Elemental (3 slots) |
 | :--- | :--- |
@@ -88,7 +95,10 @@ Cada ataque básico preenche 1 slot vazio com: **fogo (F)**, **gelo (G)** ou **t
 * A habilidade consome apenas os slots do elemento correspondente.
 
 Menu Especial:
-1 - Ataque básico 2 - Bola de Fogo 3 - Nova de Gelo 4 - Trovão
+1 - Ataque básico 
+2 - Bola de Fogo 
+3 - Nova de Gelo 
+4 - Trovão
 
 ---
 
@@ -104,19 +114,20 @@ Mestra das Poses 🌙
 **Regras:**
 * Começa sem pose.
 * Ataque básico:
-    * sem pose → **ganha pose aleatória**
-    * com pose → **mantém**
+    * sem pose → **ganha pose aleatória**;
+    * com pose → **mantém a pose que estava e aproveita os benefícios**;
 * Habilidade especial **consome pose** e retorna ao estado neutro.
 
 ---
 
-### Monoco – Carcereiro de Almas 🔗
+### Monoco
+Carcereiro de Almas 🔗
 
 | Mecânica Principal | Grilhões de Alma |
 | :--- | :--- |
 
 Ataque básico aplica **1 a 10 grilhões** ao inimigo.
-* Cada grilhão reduz **0,5% do dano recebido** por Monoco.
+* Cada grilhão reduz **0,5% do dano recebido** por Monoco. Ou seja, há vantagens em apenas ficar acumulando grilhões.
 
 | Habilidade | Efeito |
 | :--- | :--- |
@@ -150,7 +161,7 @@ A tabela a seguir detalha como os pilares da Programação Orientada a Objetos (
 | **Encapsulamento** | ✔️ | Todos os atributos são **privados**. Métodos de acesso (getters/setters) e lógica interna controlam o acesso aos dados. |
 | **Herança** | ✔️ | Todos os personagens (`Gustave`, `Lune`, `Maelle`, `Monoco`) estendem a classe base `Combatente`. |
 | **Polimorfismo** | ✔️ | Ataques e habilidades são **sobrescritos** nas subclasses. A lógica do combate trata todos os personagens de forma genérica como `Combatente`. |
-| **Composição (parcial)** | ⚠️ | A classe `Main` compõe dois objetos `Combatente`. Não há classes explícitas para estruturas mais complexas como `Equipe` ou `Batalha` (considerado opcional para o escopo do projeto). |
-| **Coesão e Baixo Acoplamento** | ✔️ | Cada classe possui responsabilidade clara. O acoplamento é baixo, exceto por verificações de menus especiais via `instanceof` (aceitável dado o escopo). |
+| **Composição** | ✔️ | A classe `Main` compõe e coordena dois objetos `Combatente`.  |
+| **Coesão e Baixo Acoplamento** | ✔️ | Cada classe possui responsabilidade clara. O acoplamento é baixo, exceto por verificações de menus especiais via `instanceof`. |
 
 ---

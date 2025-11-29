@@ -53,7 +53,8 @@ java Main
 
 ## Personagens
 
-### Gustave – Guerreiro da Sobrecarga ⚡
+### Gustave 
+Guerreiro da Sobrecarga ⚡
 
 | Mecânica Principal | Sobrecarga |
 | :--- | :--- |
@@ -80,9 +81,9 @@ Cada ataque básico preenche 1 slot vazio com: **fogo (F)**, **gelo (G)** ou **t
 
 | Habilidade | Bônus de Dano |
 | :--- | :--- |
-| Bola de Fogo | +33% por slot de fogo |
-| Nova de Gelo | +33% por slot de gelo |
-| Trovão | +33% por slot de trovão |
+| Bola de Fogo | +66% por slot de fogo |
+| Nova de Gelo | +66% por slot de gelo |
+| Trovão | +66% por slot de trovão |
 
 * A habilidade consome apenas os slots do elemento correspondente.
 
@@ -91,7 +92,8 @@ Menu Especial:
 
 ---
 
-### Maelle – Mestra das Poses 🌙
+### Maelle
+Mestra das Poses 🌙
 
 | Pose | Efeito no Ataque | Efeito na Defesa |
 | :--- | :--- | :--- |
@@ -152,15 +154,3 @@ A tabela a seguir detalha como os pilares da Programação Orientada a Objetos (
 | **Coesão e Baixo Acoplamento** | ✔️ | Cada classe possui responsabilidade clara. O acoplamento é baixo, exceto por verificações de menus especiais via `instanceof` (aceitável dado o escopo). |
 
 ---
-
-## Observações Finais
-
-O projeto está pronto para apresentação acadêmica e serve como uma base sólida e funcional para um sistema de batalha 1v1.
-
-**Fácil expansão para:**
-* Sistema de itens
-* Estrutura de equipes
-* Criação de uma classe `Batalha` dedicada
-* Implementação de interface gráfica (GUI)
-* Funcionalidade de multiplayer local
-* Código organizado, coeso e orientado a objetos.

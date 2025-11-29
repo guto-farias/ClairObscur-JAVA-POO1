@@ -120,3 +120,47 @@ Ataque básico aplica **1 a 10 grilhões** ao inimigo.
 | :--- | :--- |
 | **Julgamento** | consome todos os grilhões, **+5% de dano por grilhão** |
 | **Sentença** | cura, cura base aumentada **+10% por grilhão**, consome todos os grilhões |
+
+
+---
+
+## Arquitetura
+
+A estrutura de arquivos do projeto é organizada da seguinte forma:
+
+ClairObscur/ 
+    ├── Combatente.java // Classe abstrata base 
+    ├── Gustave.java // Subclasse de Combatente 
+    ├── Lune.java // Subclasse de Combatente 
+    ├── Maelle.java // Subclasse de Combatente 
+    ├── Monoco.java // Subclasse de Combatente 
+    └── Main.java // Ponto de entrada e lógica principal do jogo
+
+---
+
+## Conceitos de POO Aplicados
+
+A tabela a seguir detalha como os pilares da Programação Orientada a Objetos (POO) foram aplicados no projeto:
+
+| Conceito | Status | Aplicação |
+| :--- | :--- | :--- |
+| **Abstração** | ✔️ | `Combatente` abstrai atributos e comportamentos genéricos. Cada personagem implementa habilidades específicas. |
+| **Encapsulamento** | ✔️ | Todos os atributos são **privados**. Métodos de acesso (getters/setters) e lógica interna controlam o acesso aos dados. |
+| **Herança** | ✔️ | Todos os personagens (`Gustave`, `Lune`, `Maelle`, `Monoco`) estendem a classe base `Combatente`. |
+| **Polimorfismo** | ✔️ | Ataques e habilidades são **sobrescritos** nas subclasses. A lógica do combate trata todos os personagens de forma genérica como `Combatente`. |
+| **Composição (parcial)** | ⚠️ | A classe `Main` compõe dois objetos `Combatente`. Não há classes explícitas para estruturas mais complexas como `Equipe` ou `Batalha` (considerado opcional para o escopo do projeto). |
+| **Coesão e Baixo Acoplamento** | ✔️ | Cada classe possui responsabilidade clara. O acoplamento é baixo, exceto por verificações de menus especiais via `instanceof` (aceitável dado o escopo). |
+
+---
+
+## Observações Finais
+
+O projeto está pronto para apresentação acadêmica e serve como uma base sólida e funcional para um sistema de batalha 1v1.
+
+**Fácil expansão para:**
+* Sistema de itens
+* Estrutura de equipes
+* Criação de uma classe `Batalha` dedicada
+* Implementação de interface gráfica (GUI)
+* Funcionalidade de multiplayer local
+* Código organizado, coeso e orientado a objetos.

@@ -66,8 +66,8 @@ Guerreiro da Sobrecarga ⚡
 | :--- | :--- |
 
 Cada ataque básico:
-1.  causa dano normal;
-2.  gera **1 a 3 pontos de carga**, esse valor sendo somado a cada ataque básico utilizado até 10.
+1.  Causa dano normal;
+2.  Gera **1 a 3 pontos de carga**, esse valor sendo somado a cada ataque básico utilizado até 10.
 
 * **Cargas** acumulam até **10** como citado acima, tornando cada vez mais benéfico usar a **Habilidade** citada abaixo:
 * Habilidade **“Sobrecarga”**:
@@ -114,8 +114,8 @@ Mestra das Poses 🌙
 **Regras:**
 * Começa sem pose.
 * Ataque básico:
-    * sem pose → **ganha pose aleatória**;
-    * com pose → **mantém a pose que estava e aproveita os benefícios**;
+    * Sem pose → **ganha pose aleatória**;
+    * Com pose → **mantém a pose que estava e aproveita os benefícios**;
 * Habilidade especial **consome pose** e retorna ao estado neutro.
 
 ---

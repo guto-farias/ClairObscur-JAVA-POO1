@@ -145,14 +145,17 @@ Menu Especial:
 
 A estrutura de arquivos do projeto é organizada da seguinte forma:
 
-ClairObscur/ 
-    ├── Combatente.java // Classe abstrata base 
-    ├── Gustave.java // Subclasse de Combatente 
-    ├── Lune.java // Subclasse de Combatente 
-    ├── Maelle.java // Subclasse de Combatente 
-    ├── Monoco.java // Subclasse de Combatente 
-    └── Main.java // Ponto de entrada e lógica principal do jogo
+A estrutura de arquivos do projeto é organizada da seguinte forma:
 
+```bash
+ClairObscur/
+├── Combatente.java  # Classe abstrata base
+├── Gustave.java     # Subclasse de Combatente
+├── Lune.java        # Subclasse de Combatente
+├── Maelle.java      # Subclasse de Combatente
+├── Monoco.java      # Subclasse de Combatente
+└── Main.java        # Ponto de entrada e lógica principal do jogo
+```
 ---
 
 ## Conceitos de POO Aplicados
